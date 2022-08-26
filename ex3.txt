@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author Igor
+ */
+public class ex3prova {
+
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        
+        double massa, massa1;
+        int tempo = 0, h, min, seg;
+        
+        
+        System.out.println("Insira a massa em gramas: ");
+        massa = leia.nextDouble();
+        
+        massa1 = massa;
+
+        while (massa1 >= 0.5) {
+            massa1 = massa1 / 2;
+            tempo = tempo + 50;
+        }
+        
+        System.out.println("Massa inicial: " + massa + " gramas ");
+        System.out.println("Massa final: " + massa1 + " gramas ");
+
+        h = (tempo / 3600);
+        min = (tempo % 3600) / 60;
+        seg = (tempo % 3600) % 60;
+        System.out.println(h + " horas, " + min + " minutos, " + seg + " segundos");
+    }
+}

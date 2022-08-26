@@ -1,0 +1,27 @@
+import java.util.Scanner;
+/**
+ *
+ * @author labinfo
+ */
+public class ex2prova {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double salario = 1000, aumento, percent = 0.015;
+       
+        aumento = salario * percent;
+        salario = aumento + salario;
+        
+        System.out.println("salario de 1996: "+ salario);
+        for( int ano = 1997; ano < 2022; ano++){
+            aumento = (salario * percent) * 2;
+            salario = aumento + salario;
+            percent = percent * 2;
+           
+        }
+        
+        System.out.println("Salario atual: "+ salario);
+        
+    }
+    
+}
